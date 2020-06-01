@@ -19,6 +19,8 @@ AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
 )
 
+# 设置可以访问的域名
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     'course',
     'operation',
     'organization',
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +131,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
 )
 
+# STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 EMAIL_HOST = "smtp.qq.com"  # SMTP服务器主机
 EMAIL_PORT = 25             # 端口
 EMAIL_HOST_USER = "2862297064@qq.com"       # 邮箱地址
